@@ -1,0 +1,43 @@
+# Site settings
+title:          Magic
+description:    "a technology blog about Android、Backend、golang"
+baseurl:        "/"
+url:            "https://blog.saymagic.cn"
+
+# Google Analytics
+google_analytics: UA—XXXXXXXX-X
+
+# Author
+author:
+  name:         saymagic
+  url:          https://blog.saymagic.cn
+  email:        saymagic.dev@gmail.com
+
+# Build settings
+markdown:       kramdown
+include:
+  - _pages
+url: "https://blog.saymagic.cn"
+
+# Assets
+sass:
+  sass_dir:     _sass
+  style:        compressed
+
+# Gems
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-seo-tag
+  # - jemoji #Uncomment this to allow emoji in your post
+
+# Permalinks
+# permalink:      /:year-month-:day/:title
+permalink: /:year/:month/:day/:title.html
+paginate:  10
+
+# Excludes
+exclude: [ Gemfile, Gemfile.lock, tale.gemspec ]
+
+# Disqus (Set to your disqus id)
+disqus:         
