@@ -1,2 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<feed xmlns="http://www.w3.org/2005/Atom"><id>https://blog.saymagic.cn</id><title>RSS feed of saymagic's blog</title></feed>
+<feed xmlns="http://www.w3.org/2005/Atom"><id>https://github.com/saymagic/saymagic.github.io</id><title>RSS feed of saymagic's saymagic.github.io</title><updated>2024-11-30T16:24:10.502467+00:00</updated><link href="https://github.com/saymagic/saymagic.github.io"/><link href="https://raw.githubusercontent.com/saymagic/saymagic.github.io/master/feed.xml" rel="self"/><generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator><entry><id>https://github.com/saymagic/saymagic.github.io/issues/1</id><title>About me</title><updated>2024-11-30T16:24:10.717567+00:00</updated><content type="html"><![CDATA[<ul>
+<li>一个Engineer</li>
+<li>喜欢魔术、跑步</li>
+<li>......</li>
+</ul>
+]]></content><link href="https://github.com/saymagic/saymagic.github.io/issues/1"/><published>2024-11-30T15:58:15+00:00</published></entry></feed>
