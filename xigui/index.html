@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="系统规划与管理师案例、论文必背问答复习工具"
+    />
+    <title>系规必背问答</title>
+    <link rel="stylesheet" href="./src/styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">系统规划与管理师</p>
+          <h1>系规必背问答</h1>
+        </div>
+        <div class="topbar-stats" aria-live="polite">
+          <span id="totalCount">393 题</span>
+          <span id="learnedCount">已掌握 0</span>
+        </div>
+      </header>
+
+      <main class="layout">
+        <aside class="sidebar" aria-label="筛选">
+          <div class="source-panel">
+            <img
+              src="./assets/source-preview.png"
+              alt="资料首页预览"
+              width="360"
+              height="509"
+            />
+            <div>
+              <strong>2025 年系规案例、论文必背</strong>
+              <span id="sourceMeta">OCR 题库</span>
+            </div>
+          </div>
+
+          <label class="field">
+            <span>关键词</span>
+            <input
+              id="searchInput"
+              type="search"
+              placeholder="搜索题目、答案、口诀"
+              autocomplete="off"
+            />
+          </label>
+
+          <label class="field">
+            <span>章节</span>
+            <select id="chapterSelect"></select>
+          </label>
+
+          <div class="chapter-list" id="chapterList" aria-label="章节列表"></div>
+        </aside>
+
+        <section class="workspace">
+          <div class="toolbar">
+            <div class="result-title">
+              <strong id="resultCount">加载中</strong>
+              <span id="activeFilter">全部章节</span>
+            </div>
+            <div class="segmented" role="tablist" aria-label="学习模式">
+              <button type="button" class="is-active" data-mode="list">列表</button>
+              <button type="button" data-mode="flash">卡片</button>
+            </div>
+          </div>
+
+          <div id="listView" class="question-list" aria-live="polite"></div>
+
+          <div id="flashView" class="flash-view" hidden>
+            <article class="flash-card">
+              <div class="card-meta" id="flashMeta"></div>
+              <h2 id="flashQuestion"></h2>
+              <div id="flashAnswer" class="answer"></div>
+              <div class="flash-actions">
+                <button type="button" class="icon-button" id="prevCard" aria-label="上一题">‹</button>
+                <button type="button" class="primary-action" id="revealCard">显示答案</button>
+                <button type="button" class="icon-button" id="nextCard" aria-label="下一题">›</button>
+              </div>
+              <button type="button" class="ghost-action" id="markFlash">标记掌握</button>
+            </article>
+          </div>
+
+          <div id="emptyState" class="empty-state" hidden>
+            <strong>没有匹配的题目</strong>
+            <span>换个关键词或章节试试。</span>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script type="module" src="./src/app.js"></script>
+  </body>
+</html>

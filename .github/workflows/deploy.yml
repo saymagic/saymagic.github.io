@@ -1,6 +1,12 @@
 name: Deploy static content to Pages
 
 on:
+  push:
+    branches:
+      - master
+    paths:
+      - xigui/**
+      - .github/workflows/deploy.yml
   issues:
     types:
       - opened
@@ -48,6 +54,7 @@ jobs:
           tar zxf zola.tar.gz && mv zola /usr/local/bin
           cp config.toml output/config.toml
           cd output && zola build --base-url $BASE_URL
+          cp -R ../xigui public/xigui
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
